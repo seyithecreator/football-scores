@@ -5,10 +5,16 @@
   width: 100%;
 }
 
+.controls: hover {
+  background-color: greenyellow;
+  color: ivory;
+  transform: translateY(-4px);
+}
+
 .slider {
   width: 90%;
   max-width: 400px;
-  accent-color: #007bff;
+  accent-color: gold;
   cursor: pointer;
 }
 

@@ -1,4 +1,5 @@
 import React from "react";
+import "./ExportButtons.css"
 import html2canvas from "html2canvas";
 import jsPDF from "jspdf";
 
@@ -32,10 +33,10 @@ function ExportButtons({ targetRef }) {
 
   return (
     <div style={{ marginBottom: 16 }}>
-      <button onClick={exportAsImage} style={{ padding: "8px 12px", marginRight: 10 }}>
-        📸 Export as Image
-      </button>
-      <button onClick={exportAsPDF} style={{ padding: "8px 12px" }}>
+      <button className="export-button" onClick={exportAsImage}>
+       📸 Export as Image
+        </button>
+        <button className="export-button" onClick={exportAsPDF}>
         📄 Export as PDF
       </button>
     </div>

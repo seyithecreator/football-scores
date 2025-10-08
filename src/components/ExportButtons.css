@@ -1,0 +1,24 @@
+/* App.css or ExportButtons.css */
+.export-button {
+  padding: 8px 12px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 6px;
+  background-color: #333; /* dark button */
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease; /* smooth hover transition */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.export-button:last-child {
+  margin-right: 0; /* remove margin for last button */
+}
+
+.export-button:hover {
+  background-color: #daa520; /* gold hover */
+  color: #000; /* optional text color change */
+  transform: scale(1.05); /* slight zoom on hover */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}

@@ -11,6 +11,7 @@ function TeamGrid({ teams, columns }) {
     >
       {teams.map((team, index) => (
         <div key={index} className="team-card">
+          <p>{team.date}</p>
           <h3>{team.name}</h3>
           <p>{team.score}</p>
         </div>
