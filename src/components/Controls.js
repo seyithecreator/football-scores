@@ -7,7 +7,7 @@ function Controls({ cols, setCols }) {
       <input
         type="range"
         min="1"
-        max="6"
+        max="13"
         value={cols}
         onChange={(e) => setCols(Number(e.target.value))}
         className="slider"
