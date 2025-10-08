@@ -1,0 +1,20 @@
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.slider {
+  width: 90%;
+  max-width: 400px;
+  accent-color: #007bff;
+  cursor: pointer;
+}
+
+/* For small screens */
+@media (max-width: 480px) {
+  .slider {
+    width: 95%;
+  }
+}
