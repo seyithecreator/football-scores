@@ -1,24 +1,22 @@
 import React from "react";
-import "./TeamGrid.css"; // 👈 we'll add this file next
+import "./TeamGrid.css";
 
-const TeamGrid = ({ teams = [], columns = 4 }) => {
-  const gridStyle = {
-    display: "grid",
-    gridTemplateColumns: `repeat(${columns}, 1fr)`,
-    gap: "12px",
-    padding: "10px",
-  };
-
+function TeamGrid({ teams, columns }) {
   return (
-    <div style={gridStyle}>
-      {teams.map((team, i) => (
-        <div key={i} className="team-card">
-          <div className="team-name">{team.name}</div>
-          {team.score && <div className="team-score">{team.score}</div>}
+    <div
+      className="team-grid"
+      style={{
+        gridTemplateColumns: `repeat(${columns}, minmax(120px, 1fr))`,
+      }}
+    >
+      {teams.map((team, index) => (
+        <div key={index} className="team-card">
+          <h3>{team.name}</h3>
+          <p>{team.score}</p>
         </div>
       ))}
     </div>
   );
-};
+}
 
 export default TeamGrid;
