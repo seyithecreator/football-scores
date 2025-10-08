@@ -1,0 +1,23 @@
+.app {
+  text-align: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #0b0b0b;
+  color: #fff;
+  min-height: 100vh;
+}
+
+/* small button visuals */
+button {
+  cursor: pointer;
+  border: 0;
+  border-radius: 8px;
+  background: #ffcc00;
+  color: #000;
+  font-weight: 700;
+}
+
+/* let the grid container be responsive */
+@media (max-width: 600px) {
+  .app { padding: 12px; }
+}
