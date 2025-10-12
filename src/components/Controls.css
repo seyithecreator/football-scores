@@ -1,26 +1,12 @@
-.controls {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
-
-.controls: hover {
-  background-color: greenyellow;
-  color: ivory;
-  transform: translateY(-4px);
-}
-
 .slider {
   width: 90%;
   max-width: 400px;
-  accent-color: gold;
   cursor: pointer;
+  accent-color: #999; /* normal (gray) */
+  transition: accent-color 0.3s ease;
 }
 
-/* For small screens */
-@media (max-width: 480px) {
-  .slider {
-    width: 95%;
-  }
+/* When hovering */
+.slider:hover {
+  accent-color: gold;
 }

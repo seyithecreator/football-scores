@@ -2,7 +2,6 @@ import React, { useRef, useState } from "react";
 import TeamGrid from "./components/TeamGrid";
 import Controls from "./components/Controls";
 import ExportButtons from "./components/ExportButtons";
-// import teams from "./scores"; // ❌ no longer needed
 import useSheetData from "./useSheetData";
 import "./App.css";
 
