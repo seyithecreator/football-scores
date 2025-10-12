@@ -1,0 +1,86 @@
+/* overlay - fade in */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.65);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  animation: overlayFadeIn 220ms ease forwards;
+}
+
+/* Modal box - soft pop / center */
+.modal-content {
+  position: relative;
+  width: 92%;
+  max-width: 480px;
+  background: #121212;
+  border-radius: 12px;
+  border: 2px solid gold;
+  padding: 22px 24px;
+  color: #fff;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.6), 0 0 30px rgba(255,215,0,0.08);
+  transform-origin: center top;
+  opacity: 0;
+  transform: translateY(-18px) scale(0.98);
+  animation: modalPopIn 320ms cubic-bezier(.16,.84,.39,1) forwards;
+}
+
+/* Close button */
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  background: transparent;
+  border: none;
+  color: gold;
+  font-size: 22px;
+  cursor: pointer;
+}
+.close-button:hover { color: #fff; }
+
+/* heading and details */
+.modal-heading {
+  color: gold;
+  margin: 6px 0 10px;
+  font-size: 1.05rem;
+}
+.modal-details p {
+  margin: 8px 0;
+  font-size: 0.95rem;
+  color: #ddd;
+}
+
+/* animations */
+@keyframes overlayFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes modalPopIn {
+  from {
+    opacity: 0;
+    transform: translateY(-18px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* small screens - slightly smaller modal */
+@media (max-width: 420px) {
+  .modal-content { padding: 18px; max-width: 92%; }
+}
+
+/* Prevent jump class (we set paddingRight in JS) */
+body.modal-open {
+  overflow: hidden; /* we compensate paddingRight via JS */
+}
+
+/* ensure modal overlay sits above everything */
+.modal-overlay,
+.modal-content {
+  -webkit-tap-highlight-color: transparent;
+}
