@@ -59,3 +59,29 @@
 .team-card:hover p:last-child {
   color: black;
 }
+
+/* 📱 Better mobile view */
+@media (max-width: 600px) {
+  .team-grid {
+    grid-template-columns: repeat(1, minmax(200px, 1fr)) !important;
+    gap: 12px;
+    padding: 0.5rem;
+  }
+
+  .team-card {
+    padding: 10px;
+    border-radius: 8px;
+  }
+
+  .team-card .team-date {
+    font-size: clamp(0.75rem, 2vw, 0.9rem);
+  }
+
+  .team-card h3 {
+    font-size: clamp(0.85rem, 3vw, 1rem);
+  }
+
+  .team-card p:last-child {
+    font-size: clamp(0.9rem, 3vw, 1rem);
+  }
+}

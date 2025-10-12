@@ -7,7 +7,7 @@
   min-height: 100vh;
 }
 
-/* small button visuals */
+ small button visuals 
 button {
   cursor: pointer;
   border: 0;
@@ -18,6 +18,88 @@ button {
 }
 
 /* let the grid container be responsive */
-@media (max-width: 600px) {
+/*@media (max-width: 600px) {
   .app { padding: 12px; }
+}
+
+.popup {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.85);
+  color: white;
+  padding: 14px 20px;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  text-align: center;
+  width: 90%;
+  max-width: 350px;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.popup button {
+  background: gold;
+  border: none;
+  color: black;
+  font-weight: 600;
+  margin-top: 8px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+*/
+
+/* Hide the slider on small screens */
+@media (max-width: 600px) {
+  .controls {
+    display: none;
+  }
+}
+
+/* Popup styling */
+.popup {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.85);
+  color: white;
+  padding: 14px 20px;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  text-align: center;
+  width: 90%;
+  max-width: 350px;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 0.5s ease;
+}
+
+.popup button {
+  background: gold;
+  border: none;
+  color: black;
+  font-weight: 600;
+  margin-top: 8px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.popup button:hover {
+  background: #fff;
+  color: black;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 10px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
 }

@@ -10,3 +10,9 @@
 .slider:hover {
   accent-color: gold;
 }
+/* Hide slider on small screens */
+@media (max-width: 600px) {
+  .controls {
+    display: none;
+  }
+}
